@@ -11,3 +11,39 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.nav-btn {
+  text-align: center;
+}
+.center-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content-div {
+  text-align: center;
+  width: 80%;
+}
+.loc-card {
+  margin: 10px auto 10px auto;
+  text-align: center;
+  width: 90%;
+}
+
+.q-card {
+  margin: 10px auto 10px auto;
+  width: 90%
+}
+
+.q-card > p{
+  padding: 1px 10px 1px 10px;
+}
+
+.logo {
+  max-width: 400px;
+  margin-bottom: 0;
+}
+
+.MuiCard-root {
+ box-shadow: 0 2px 2px 0 black; 
+}
