@@ -13,6 +13,9 @@ ________________
 _ refactor adminBar: Home|Questions|Locations|Logout
 _ Question admin: Search|Add|Update?
 _ Location admin: Add/Delete
+_ update branding/colors
+  _ find a logo
+  _ define color scheme
 
 ________________
        DB      
