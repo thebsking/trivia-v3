@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, ButtonGroup, Box } from '@mui/material';
 
-const AdminTopBar = () => {
+const AdminBarLoc = () => {
   return (
     <Box
       sx={{
@@ -12,12 +12,12 @@ const AdminTopBar = () => {
     >
       <ButtonGroup variant='text' aria-label='nav-btns'>
         <Button className='nav-btn' href='/'>Home</Button>
-        <Button className='nav-btn' href='/loc-admin'>Locations</Button>
-        <Button className='nav-btn' href='/db-admin'>Questions</Button>
-        <Button className='nav-btn' href='/logout'>Logout</Button>
+        <Button className='nav-btn' href='/search'>Search Database</Button>
+        <Button className='nav-btn' href='/add'>Add to Database</Button>
+        <Button disabled className='nav-btn' href='/new'>Create New Game</Button>
       </ButtonGroup>
     </Box>
   )
 };
 
-export default AdminTopBar;
+export default AdminBarLoc;

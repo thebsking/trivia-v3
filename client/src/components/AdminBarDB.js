@@ -11,10 +11,8 @@ const AdminTopBar = () => {
       }}
     >
       <ButtonGroup variant='text' aria-label='nav-btns'>
-        <Button className='nav-btn' href='/'>Home</Button>
-        <Button className='nav-btn' href='/loc-admin'>Locations</Button>
-        <Button className='nav-btn' href='/db-admin'>Questions</Button>
-        <Button className='nav-btn' href='/logout'>Logout</Button>
+        <Button className='nav-btn' href='/search'>Search Database</Button>
+        <Button className='nav-btn' href='/add'>Add to Database</Button>
       </ButtonGroup>
     </Box>
   )
