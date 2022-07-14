@@ -4,6 +4,7 @@ import Dropdown from "../components/Dropdown";
 import Input from "../components/Input";
 import AdminTopBar from '../components/AdminTopBar'
 import axios from "axios"
+import LocationForm from "../components/LocationForm";
 
 const AddForm = () => {
 
