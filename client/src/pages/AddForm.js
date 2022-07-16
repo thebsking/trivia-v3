@@ -3,8 +3,8 @@ import { Button, Checkbox, FormControlLabel } from '@mui/material'
 import Dropdown from "../components/Dropdown";
 import Input from "../components/Input";
 import AdminTopBar from '../components/AdminTopBar'
+import AdminBarLoc from "../components/AdminBarLoc";
 import axios from "axios"
-import LocationForm from "../components/LocationForm";
 
 const AddForm = () => {
 
@@ -40,6 +40,7 @@ const AddForm = () => {
   return (
     <>
       <AdminTopBar />
+      <AdminBarLoc />
       <form>
         <div className="center-div">
           <Dropdown label="Category" id="cat-select" options={listOptions} onChange={e => setCat(e.target.value)} />
