@@ -15,5 +15,11 @@ module.exports = {
     })
     .then(loc => res.json(loc))
     .catch(err => res.status(400).json(err))
+  },
+  delete: function(req, res){
+    db.Location.findByIdAndDelete(req.params.id)
+    .then(loc => loc.remove())
+    .then(loc => res.json(loc))
+    .catch(err => res.status(400).json(err))
   }
 }
