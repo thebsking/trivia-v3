@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Button, ButtonGroup, Card } from '@mui/material'
 import Dropdown from "../components/Dropdown";
 import AdminTopBar from '../components/AdminTopBar';
+import AdminBarLoc from '../components/AdminBarLoc'
 import axios from "axios";
 
 const SearchForm = () => {
@@ -43,6 +44,7 @@ const SearchForm = () => {
   return (
     <>
       <AdminTopBar />
+      <AdminBarLoc />
       <div id="input-div" className="center-div">
         <Dropdown label="Category" id="cat-select" options={listOptions} onChange={e => setCatValue(e.target.value)} />
         <ButtonGroup variant="contained" orientation="vertical" >

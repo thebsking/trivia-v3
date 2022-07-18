@@ -7,6 +7,7 @@ import SearchForm from './pages/SearchForm'
 import Home from './pages/Home';
 import Locations from './pages/Locations';
 import Admin from './pages/Admin';
+import LocationAdmin from './pages/LocationAdmin';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -19,6 +20,7 @@ root.render(
         <Route path='search' element={<SearchForm />} />
         <Route path='locations' element={<Locations />} />
         <Route path='admin' element={<Admin />} />
+        <Route path='loc-admin' element={<LocationAdmin />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

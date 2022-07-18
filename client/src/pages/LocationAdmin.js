@@ -1,1 +1,60 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Table, TableBody, TableCell, TableContainer, TableRow, Paper, TableHead, Button } from '@mui/material';
+import AdminTopBar from '../components/AdminTopBar'
+import axios from 'axios';
+
+function LocationAdmin() {
+
+  const [locArray, setLocArray] = useState([]);
+
+  useEffect(() => {
+    renderLocations();
+  })
+
+  function renderLocations() {
+    return axios.get('/api/locations')
+      .then(res => {
+        setLocArray(res.data)
+      })
+      .catch(err => console.log(err))
+  }
+
+
+  return (
+    <>
+      <AdminTopBar />
+      <div id='loc-admin' className='center-div'>
+        <h2>All Locations</h2>
+        <Button variant='contained'>Add Location</Button>
+        <TableContainer component={Paper}>
+          <Table>
+            <TableHead>
+              <TableRow>
+                <TableCell align='center'>Location</TableCell>
+                <TableCell align='center'>Weekday</TableCell>
+                <TableCell align='center'>Start Time</TableCell>
+                <TableCell align='center'>Image</TableCell>
+                <TableCell align='center'>Delete</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {locArray.map((row) => {
+                return(
+                <TableRow key={row.name}>
+                  <TableCell align ='center'>{row.name}</TableCell>
+                  <TableCell align='center'>{row.weekday}</TableCell>
+                  <TableCell align='center'>{row.start}</TableCell>
+                  <TableCell align='center'>{row.image}</TableCell>
+                  <TableCell align='center'>{<Button variant='contained' color='error'>X</Button>}</TableCell>
+                </TableRow>
+                )
+              })}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </div>
+    </>
+  )
+}
+
+export default LocationAdmin;

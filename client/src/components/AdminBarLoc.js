@@ -11,7 +11,6 @@ const AdminBarLoc = () => {
       }}
     >
       <ButtonGroup variant='text' aria-label='nav-btns'>
-        <Button className='nav-btn' href='/'>Home</Button>
         <Button className='nav-btn' href='/search'>Search Database</Button>
         <Button className='nav-btn' href='/add'>Add to Database</Button>
         <Button disabled className='nav-btn' href='/new'>Create New Game</Button>
