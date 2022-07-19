@@ -1,12 +1,10 @@
 [{
-    "_id": "62c24d31a52503d01294198e",
     "name": "Byrne's Pub",
     "weekday": "Monday",
     "start": "7:00pm",
     "image": "byrnes.jpeg"
   },
   {
-    "_id": "62c24d31a52503d012941990",
     "name": "Plank's Bier Garten",
     "weekday": "Wednesday",
     "start": "7:30pm",
