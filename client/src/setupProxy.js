@@ -5,10 +5,5 @@ module.exports = function (app) {
     target: 'http://localhost:3001'
   })
   );
-
-  app.use(createProxyMiddleware('/otherApi/**', {
-    target: 'http://localhost:3001'
-  })
-  );
 };
 
