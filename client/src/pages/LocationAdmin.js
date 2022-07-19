@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Table, TableBody, TableCell, TableContainer, TableRow, Paper, TableHead, Button } from '@mui/material';
 import AdminTopBar from '../components/AdminTopBar'
+import BasicModal from '../components/BasicModal';
+import LocationForm from '../components/LocationForm'
 import axios from 'axios';
 
 function LocationAdmin() {
@@ -26,12 +28,16 @@ function LocationAdmin() {
       .catch(err => console.log(err))
   }
 
+  const [open, setOpen] = useState(false)
+  const handleModal = () => setOpen(!open)
+
   return (
     <>
       <AdminTopBar />
       <div id='loc-admin' className='center-div'>
         <h2>All Locations</h2>
-        <Button variant='contained'>Add Location</Button>
+        <Button variant='contained' onClick={handleModal}>Add Location</Button>
+        <BasicModal open={open} close={handleModal} content={<LocationForm />} />
         <TableContainer component={Paper}>
           <Table>
             <TableHead>
