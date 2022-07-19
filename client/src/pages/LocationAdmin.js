@@ -19,6 +19,12 @@ function LocationAdmin() {
       .catch(err => console.log(err))
   }
 
+  function deleteRow(id) {
+    axios.delete('/api/locations/' + id)
+      .then(res => console.log(res))
+      .then(window.location.reload.bind(window.location))
+      .catch(err => console.log(err))
+  }
 
   return (
     <>
@@ -39,14 +45,16 @@ function LocationAdmin() {
             </TableHead>
             <TableBody>
               {locArray.map((row) => {
-                return(
-                <TableRow key={row.name}>
-                  <TableCell align ='center'>{row.name}</TableCell>
-                  <TableCell align='center'>{row.weekday}</TableCell>
-                  <TableCell align='center'>{row.start}</TableCell>
-                  <TableCell align='center'>{row.image}</TableCell>
-                  <TableCell align='center'>{<Button variant='contained' color='error'>X</Button>}</TableCell>
-                </TableRow>
+                return (
+                  <TableRow key={row.name}>
+                    <TableCell align='center'>{row.name}</TableCell>
+                    <TableCell align='center'>{row.weekday}</TableCell>
+                    <TableCell align='center'>{row.start}</TableCell>
+                    <TableCell align='center'>{row.image}</TableCell>
+                    <TableCell align='center'>{
+                      <Button variant='contained' color='error' onClick={() => { deleteRow(row._id) }}>X</Button>}
+                    </TableCell>
+                  </TableRow>
                 )
               })}
             </TableBody>
