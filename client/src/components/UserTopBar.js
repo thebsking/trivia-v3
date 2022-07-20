@@ -13,7 +13,7 @@ const UserTopBar = () => {
       <ButtonGroup variant='text' aria-label='nav-btns'>
         <Button className='nav-btn' href='/'>Home</Button>
         <Button className='nav-btn' href='/locations'>Find a Game</Button>
-        <Button className='nav-btn' href='/search'>Admin</Button>
+        <Button className='nav-btn' href='/loc-admin'>Admin</Button>
       </ButtonGroup>
     </Box>
   )
