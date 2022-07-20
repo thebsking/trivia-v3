@@ -8,6 +8,7 @@ router
   
 router
   .route('/:id')
+  .put(controller.updateLocation)
   .delete(controller.deleteLocation)
 
 module.exports = router;

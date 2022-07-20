@@ -12,9 +12,23 @@ module.exports = {
       "weekday": req.body.weekday,
       "start": req.body.start,
       "image": req.body.image,
+      "address": req.body.adress
     })
       .then(loc => res.json(loc))
       .catch(err => res.status(400).json(err))
+  },
+  updateLocation: function(req, res){
+    db.Location.findByIdAndUpdate(req.params.id, {
+      $set: {
+        "name": req.body.name,
+        "weekday": req.body.weekday,
+        "start": req.body.start,
+        "image": req.body.image,
+        "address": req.body.address
+      }
+    })
+    .then(loc => res.json(loc))
+    .catch(err => res.status(400).json(err))
   },
   deleteLocation: function (req, res) {
     db.Location.findByIdAndRemove(req.params.id)
