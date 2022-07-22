@@ -18,8 +18,7 @@ export default function LoginForm(){
 
   return (
     <div id='login-form' className='center-div'>
-      <Input id='user-field' label='Username' onChange={(e) => setUser(e.target.value) } />
-      <Input id='pass-field' label='Password' onChange={e => setPass(e.target.value)} type='password' />
+      <Input id='pass-field' label='Enter Code' onChange={e => setPass(e.target.value)} type='password' />
       <Button variant='contained' onClick={handleSubmit}>Login</Button>
     </div>
   )
