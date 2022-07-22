@@ -5,7 +5,8 @@ const locationSchema = new Schema({
   name: String,
   weekday: String,
   start: String,
-  image: String
+  image: String,
+  address: String,
 });
 
 const Location = mongoose.model('Locations', locationSchema);

@@ -1,4 +1,5 @@
 module.exports = {
   Location: require('./location'),
-  Question: require('./question')
+  Question: require('./question'),
+  Password: require('./password')
 };

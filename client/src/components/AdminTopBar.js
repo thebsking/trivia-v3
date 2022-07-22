@@ -11,10 +11,9 @@ const AdminTopBar = () => {
       }}
     >
       <ButtonGroup variant='text' aria-label='nav-btns'>
-        <Button className='nav-btn' href='/'>Home</Button>
         <Button className='nav-btn' href='/loc-admin'>Locations</Button>
         <Button className='nav-btn' href='/search'>Questions</Button>
-        <Button className='nav-btn' href='/logout'>Logout</Button>
+        <Button className='nav-btn' href='/'>Close Admin</Button>
       </ButtonGroup>
     </Box>
   )

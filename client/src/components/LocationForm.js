@@ -46,7 +46,7 @@ function LocationForm() {
         label='Image'
         onChange={setImage}
       />
-      <Button variant='contained' onClick={submitForm} color='warning'>Add</Button>
+      <Button variant='contained' onClick={submitForm}>Add</Button>
     </div>
   )
 
